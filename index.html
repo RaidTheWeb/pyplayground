@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Python Playground</title>
+    <link rel="stylesheet" href="css/playground.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/skulpt.min.js"></script>
+    <script src="/js/skulpt-stdlib.js"></script>
+</head>
+<body>
+    <div>
+        <button class="button" id="runbutton">Run</button> <p style="display:inline;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">(Win: Alt+R Mac: Option-R)</p>
+    </div>
+    
+    <br>
+    <div>
+        <div class="main">
+            <div id="editor"># Python Playground Welcome Example
+# Feature-fulled Python editor and runner in your browser
+
+def welcome():
+    print('Hello! and welcome to the Python Playground!')
+
+welcome()
+            </div>
+        </div>
+
+        <div class="sidenav">
+            <pre id="output">Python 3.7 on PyPlay
+--------------------
+            </pre>
+        </div>
+    </div>
+    
+        
+    <script src="/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        window.editor = ace.edit("editor");
+        editor.setTheme("ace/theme/monokai");
+        editor.session.setMode("ace/mode/python");
+        editor.commands.addCommand({
+            name: 'runCode',
+            bindKey: {win: 'Alt-R',  mac: 'Option-R'},
+            exec: function(editor) {
+                document.getElementById('runbutton').click();
+            },
+            readOnly: true // false if this command should not apply in readOnly mode
+        });
+    </script>
+    <script src="/js/run.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
