@@ -6,11 +6,11 @@ body {
 #editor { 
     position: absolute;
     width: 60%;
-    height: 60%;
+    height: 100%;
 }
 
 .sidenav {
-    height: 60%;
+    height: 100%;
     width: 60%;
     position: absolute;
     z-index: 1;
