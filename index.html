@@ -17,13 +17,38 @@
     <br>
     <div>
         <div class="main">
-            <div id="editor"># Python Playground Welcome Example
-# Feature-fulled Python editor and runner in your browser
+            <div id="editor"># Welcome To PyPlay Python Playground!
+# Press the run button to run this python script, (or press ALT+R)
 
-def welcome():
-    print('Hello! and welcome to the Python Playground!')
+# PyPlay is powered by a custom version of Skulpt
+# PyPlay comes stocked with the most commonly used standard libraries for python 3.7.x
+# Import any of these with `import libraryname` replacing libraryname with the one you wish to use.
 
-welcome()</div>
+ # Edit this script and run or try out some different examples, Have Fun! :D
+            
+ # Program to display the Fibonacci sequence up to n-th term
+
+nterms = 20
+
+# first two terms
+n1, n2 = 0, 1
+count = 0
+
+# check if the number of terms is valid
+if nterms <= 0:
+    print("Please enter a positive integer")
+elif nterms == 1:
+    print("Fibonacci sequence upto",nterms,":")
+    print(n1)
+else:
+    print("Fibonacci sequence:")
+    while count < nterms:
+        print(n1)
+        nth = n1 + n2
+        # update values
+        n1 = n2
+        n2 = nth
+        count += 1</div>
         </div>
 
         <div class="sidenav">
